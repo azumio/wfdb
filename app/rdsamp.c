@@ -388,10 +388,9 @@ char *argv[];
 	if( validcsvflag ){
 		//output '0' for invalid values instead of '-'
 		char *nInvalid = malloc(strlen(invalid) + 1);
-		strcmp(nInvalid,invalid);
+		strcpy(nInvalid,invalid);
 		nInvalid[strlen(nInvalid)-1] = '0';
 		invalid = nInvalid;
-		printf("Invalid '%s'\n",invalid);
 	}
 
 	if (xflag) (void)printf("<samplevectors>\n", nsig+1);
